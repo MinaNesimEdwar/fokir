@@ -1,0 +1,577 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans 3', sans-serif;
+    scroll-behavior: smooth;
+}
+.container{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+.main-color{
+    color:#FF305B;
+}
+.clear-fix{
+    clear: both;
+}
+h2{
+    color:#333333;
+    font-size: 40px ;
+    font-weight: 800;
+    margin-bottom: 50px;
+    position: relative;
+ }
+ h2::before{
+    content:"";
+    width: 70px;
+    height:10px;
+    border-top:1px #FF305B solid;
+    border-bottom:1px #FF305B solid;
+    position: absolute;
+    bottom:-20px;
+    left: 50%;
+    transform:translateX(-50%) ;
+ }
+ h2::after{
+    content:"";
+    width: 150px;
+    height:1px;
+    background-color: #FF305B;
+    position: absolute;
+    bottom:-15px;
+    left: 50%;
+    transform:translateX(-50%) ;
+ }
+
+ /* The start of home section  */
+.home{
+    width: 100%;
+    height: 100vh;
+    background:url("../images/hero img.jpg")  center/cover  no-repeat ;
+    position: relative;
+}
+.home .nav {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    z-index: 99999;
+}
+.home .nav .container .logo a{
+    text-decoration: none;
+    font-size: 26px ;
+    font-weight: 800;
+    float: left;
+}
+.home .nav .container ul{
+    float: right;
+    list-style-type: none;
+}
+.home .nav .container ul li{
+    float: left;
+    padding: 10px 15px;
+}
+.home .nav .container ul li a{
+    text-decoration: none;
+    color: white;
+    transition: 0.3s all;  
+}
+.home .nav .container ul li .special{
+    color: #FF305B;
+}
+.home .nav .container ul li a:hover{
+    color: #FF305B;
+}
+.home .overlay{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+}
+.home .overlay .caption{
+    text-align: center;
+    margin-top: 250px;
+}
+.caption h3{
+    font-size: 24px;
+    color: white;
+}
+.caption h1{
+    font-size: 70px;
+}
+.caption h4{
+    font-size: 26px;
+    color: white;
+    font-weight: 300;
+}
+.caption h4::after{
+   content: "Developer|";
+   animation-name: typing;
+   animation-duration: 1.5s;
+   animation-iteration-count: infinite;
+}
+@keyframes typing{
+   0%{content: "Developer|";}
+   6%{content: "Develope|";}
+   12%{content: "Develop|";}
+   18%{content: "Develo|";}
+   24%{content: "Devel|";}
+   30%{content: "Deve|";}
+   36%{content: "Dev|";}
+   42%{content: "De|";}
+   48%{content: "D|";}
+   54%{content: "|";}
+   60%{content: "D|";}
+   66%{content: "De|";}
+   72%{content: "Des|";}
+   78%{content: "Desi|";}
+   84%{content: "Desig|";}
+   90%{content: "Design|";}
+   96%{content: "Designe|";}
+   100%{content: "Designer|";}
+}
+ /* The end of home section  */
+
+/* The start of about section */
+.about{
+   padding: 100px 0;
+}
+.about .container .about-image{
+   width: 30%;
+   border:10px #333333 solid;
+   border-radius: 5px;
+   float: left;
+}
+.about .container .about-image .special-image{
+   position: relative;
+   top: 25px;
+   left: 25px;
+   overflow: hidden;
+}
+.about .container .about-image .special-image img{
+   width: 100%;
+   display: block;
+}
+
+.about .container .about-image .special-image .overlay{
+   position: absolute;
+   background-color: rgba(0, 0, 0, 0.5);
+   top:100%;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   opacity: 0;
+   transition: 0.5s all ease-in;
+}
+.about .container .about-image .special-image:hover .overlay{
+   top: 0;
+   opacity: 1;
+}
+.about .container .about-image .special-image .overlay .social-icons{
+   margin-top:200px ;
+}
+.about .container .about-image .special-image .overlay .social-icons i{
+   font-size: 20px;
+   color: white;
+   padding:0 10px ;
+   transition:0.3s all ;
+   cursor: pointer;
+}
+.about .container .about-image .special-image .overlay .social-icons i:hover{
+   color: #FF305B;
+} 
+.about .container .about-caption{
+   width: 60%;
+   float: right;
+   text-align: left;
+}
+.about .container .about-caption h3{
+   color: #333333;
+   font-size: 34px;
+   font-weight: 600;
+   margin-bottom:10px ;
+}
+.about .container .about-caption h3::before{
+content: "I";
+color: #FF305B;
+font-size: 34px;
+font-weight: 600;
+margin-right: 10px;
+}
+.about .container .about-caption p{
+   font-size: 18px;
+   color: #555555;
+   font-weight: 400;
+   margin: 15px 0;
+   padding-bottom: 25px;
+   border-bottom: 1px #333333 dashed;
+}
+.about .container .about-caption ul{
+   width: 50%;
+   list-style-type: none;
+   padding: 0;
+   margin: 10px 0;
+   float: left;
+}
+.about .container .about-caption ul li{
+  margin: 15px 0;
+}
+.about .container .about-caption ul li span{
+   color: #333333;
+   font-weight: 600;
+}
+.about .container .about-caption button{
+   border: none;
+   border-radius: 4px;
+   padding: 10px 25px;
+   background-color: #FF305B;
+   color: white;
+   margin-right:10px;
+   font-size: 18px;
+   cursor: pointer;
+   transition: 0.5s all;
+}
+.about .container .about-caption button:hover{
+   background-color: #a94442;
+}
+/* The end of about section */
+
+ /* The start of services section  */
+ .services{
+    background-color: #f1f1f1;
+    padding: 100px 0;
+ }
+ .services .container .items .item{
+    width: 25%;
+    text-align: center;
+    padding: 30px 10px;
+    float: left;
+    transition: 0.5s all;
+ }
+ .services .container .items .item:hover{
+    background-color: white;
+    box-shadow:0px 15px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+ }
+ .services .container .items .item i{
+    font-size: 36px;
+    transition: 0.5s all;
+ }
+ .services .container .items .item:hover i{
+    transform: scale(1.2);
+ }
+ .services .container .items .item h3{
+    margin-block: 15px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333333;
+ }
+ .services .container .items .item p{
+    color: #555555;
+    font-size: 18px;
+ }
+/* The end of services section  */
+
+/* The start of portfolio section */
+.portfolio{
+   padding: 100px 0;
+}
+.portfolio .container .menu {
+   margin: 20px 0;
+}
+.portfolio .container .menu button{
+   border: none;
+   padding: 10px 15px;
+   font-size: 18px;
+   color: #333333;
+   font-weight: 400;
+   background-color: transparent;
+   cursor: pointer;
+}
+.portfolio .container .menu .special{
+   color: #FF305B;
+}
+.portfolio .container .gallery .inner{
+   width: 33.3333%;
+   padding: 10px 15px;
+   cursor: pointer;
+   float: left;
+}
+.portfolio .container .gallery .inner .item img{
+   width: 100%;
+   display: block;
+}
+.portfolio .container .gallery .inner .item{
+   position: relative;
+}
+.portfolio .container .gallery .inner .item .overlay{
+   position: absolute;
+   top: 0;
+   left:0;
+   bottom: 0;
+   right: 0;
+   background-color: rgba(0, 0, 0, 0.5);
+   opacity: 0;
+   transition: 0.2s all ease-in;
+}
+.portfolio .container .gallery .inner .item:hover .overlay {
+   opacity: 1;
+}
+.portfolio .container .gallery .inner .item .overlay i{
+   font-size: 26px;
+   color: #FF305B;
+   position: absolute;
+   right: 10px;
+   bottom: 10px;
+}
+/* The end of portfolio section */
+
+
+/* The start of icons section  */
+.icons{
+    padding: 80px;
+    background-color: #f1f1f1;
+}
+.icons .container .item{
+    width: 25%;
+    text-align: center;
+    float: left;
+}
+.icons .container .item i{
+    font-size: 26px;
+}
+.icons .container .item h3{
+    font-size: 26px;
+    font-weight: 800;
+    color: #333333;
+    margin-block: 10px;
+}
+.icons .container .item h5{
+    font-size: 16px;
+    color: #555555;
+    font-weight: 600;
+}
+ /* The end of icons section  */
+
+ /* The start of testimonial section */
+.testimonial{
+   padding: 100px 0;
+}
+.testimonial .container .client{
+   width: 70%;
+   margin: auto;
+   background-color: #f1f1f1;
+   padding:40px;
+   border-radius:6px ;
+   position: relative;
+   overflow: hidden;
+   z-index: -2;
+}
+.testimonial .container .client::before{
+   content: "";
+   width: 250px;
+   height: 300px;
+   background-color: #FF305B;
+   transform: rotate(45deg);
+   position: absolute;
+   left: -125px;
+   top: -150px;
+   z-index: -1;
+}
+.testimonial .container .client .client-img{
+   width: 20%;
+   float: left;
+}
+.testimonial .container .client .client-img img{
+   width: 75%;
+   border-radius: 50%;
+}
+.testimonial .container .client .client-caption{
+   width: 80%;
+   float: left;
+   padding: 0 20px;
+   text-align: left;
+}
+.testimonial .container .client .client-caption h3{
+   color: #333333;
+   font-size: 26px;
+   font-weight: 600;
+   margin-bottom: 15px;
+}
+.testimonial .container .client .client-caption h4{
+   color: #777777;
+   font-size: 15px;
+   font-weight: 600;
+   margin: 10px 0;
+}
+.testimonial .container .client .client-caption p{
+   line-height: 30px;
+   color: #555555;
+   font-size: 18px;
+   font-style: italic;
+   margin-bottom: 15px;
+}
+.testimonial .container .client .client-caption .client-rate i{
+   color: gold;
+}
+/* The end of testimonial section */
+
+
+/* The start of blog section  */
+ .blog{
+    background-color: #f1f1f1;
+    padding: 100px 0;
+ }
+ .blog .container .cards .inner{
+    width: 33.333%;
+    float: left;
+    padding-inline:15px  ;
+ }
+ .blog .container .cards .card{
+    background-color: white;
+    text-align: left;
+ }
+ .blog .container .cards .card .card-photo{
+    height: 220px;
+ }
+ .blog .container .cards .card .card-photo img{
+    width: 100%;
+    height: 100%;
+ }
+ .blog .container .cards .card .card-photo iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+ }
+ .blog .container .cards .card .card-content{
+    padding-left: 15px;
+ }
+ .blog .container .cards .card .card-content p{
+    color: #555555;
+    margin: 10px 0;
+    line-height: 30px;
+ }
+ .blog .container .cards .card .card-content h3{
+    color: #333333;
+    font-size: 24px;
+    font-weight: 600;
+    transition: 0.5s all;
+ }
+ .blog .container .cards .card .card-content h3:hover{
+    color: #FF305B;
+ }
+ .blog .container .cards .card .card-content a{
+    text-decoration: none;
+    color: #333333;
+    font-size: 20px;
+    transition: 0.5s all;
+ }
+ .blog .container .cards .card .card-content a:hover{
+    color: #FF305B;
+ }
+ .blog .container .cards .card .card-content .link{
+    padding: 15px 0;
+ }
+  /* The end of icons section  */
+
+  /* The start of contact section */
+.contact{
+   padding: 100px 0;
+}
+.contact .container form{
+   width: 60%;
+   margin: auto;
+   position: relative;
+}
+.contact .container form input{
+   font-size: 14px;
+   color: #555555;
+   display: block;
+   padding: 10px;
+   border: 1px #ccc solid;
+   border-radius: 4px;
+   margin: 10px 0;
+   width: 100%;
+   outline: none;
+}
+.contact .container form input:focus{
+   border:1px #a94442 solid;
+   box-shadow:0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+.contact .container form .name{
+   width: 48%;
+   float: left;
+}
+.contact .container form .email{
+   width: 48%;
+   float: right;
+}
+.contact .container form textarea{
+   width: 100%;
+   height: 120px;
+   resize: both;
+   overflow: auto;
+   font-size: 14px;
+   color: #555555;
+   display: block;
+   padding: 10px;
+   border: 1px #ccc solid;
+   border-radius: 4px;
+   margin: 15px 0;
+   outline: none;
+}
+.contact .container form textarea:focus{
+   border:1px #a94442 solid;
+   box-shadow:0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+.contact .container form .btn{
+   border: none;
+   color: white;
+   font-size: 18px;
+   padding: 10px 25px;
+   border-radius: 4px;
+   background-color: #FF305B;
+   position: absolute;
+   left: 0;
+   transition: 0.5s all;
+   cursor: pointer;
+}
+.contact .container form .btn:hover{
+   background-color: rgb(213, 40, 40);
+   box-shadow:0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+/* The end of contact section */
+
+ /* The start of footer section  */
+.footer{
+    padding: 60px 0;
+    background-color: #333333;
+}
+.footer .social{
+    text-align: center;
+}
+.footer .social a{
+    color: white;
+    margin-inline: 10px;
+    transition: 0.5s all;
+}
+.footer .social a:hover{
+    color:#FF305B ;
+}
+.footer p{
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    margin-top: 15px;
+}
+.footer p a{
+    text-decoration: none;
+}
+.footer p a:hover{
+    text-decoration: underline;
+}
+/* The end of footer section  */
+
+
+
